@@ -3,16 +3,22 @@ public class Employee {
     private String fullName;
     private int department;
    private int salary;
-    private int id =0;
+  private int id;
+
 
     public Employee( String fullName,int department, int salary){
 
         this.fullName=fullName;
         this.department=department;
         this.salary=salary;
-       this.id++;
     }
+    public static int id(){
+        int id=0;
+        id++;
+        System.out.println(id);
+        return id;
 
+    }
 
 
     public String getFullName(){return this.fullName;}
@@ -23,7 +29,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "id"+ id + " Имя- " + fullName +
+        return " Имя- " + fullName +
                 " отдел- " + department +
                 " зп- " + salary;
     }

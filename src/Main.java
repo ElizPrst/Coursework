@@ -1,6 +1,6 @@
 public class Main {
 
-        private static final Employee[] employees= new Employee[10];
+        private static Employee[] employees= new Employee[10];
 
     public static void main(String[] args) {
         Employee one = new Employee("Иванов Иван Иванович",1,80_000);
@@ -10,7 +10,6 @@ public class Main {
         employees[0]=one;
         employees[1]=two;
         employees[2]=three;
-
 
         System.out.println(employees[0]);
         System.out.println(employees[1]);
