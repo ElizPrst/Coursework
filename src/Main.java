@@ -19,7 +19,7 @@ public class Main {
         //System.out.println("Найти сотрудника с максимальной зарплатой "+maxSalary());
         //System.out.println("Найти сотрудника с минимальной зарплатой "+minSalary());
         //System.out.println("Подсчитать среднее значение зарплат "+calculateAverageSalary());
-        // printFullName(); //Получить Ф. И. О. всех сотрудников (вывести в консоль).
+        //printFullName(); //Получить Ф. И. О. всех сотрудников (вывести в консоль).
 
 
     }
