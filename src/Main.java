@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
         private static Employee[] employees= new Employee[10];
@@ -11,15 +13,21 @@ public class Main {
         employees[1]=two;
         employees[2]=three;
 
-        System.out.println(employees[0]);
-        System.out.println(employees[1]);
+
+       //printEmployees(); //Получить список всех сотрудников со всеми имеющимися по ним данными (вывести в консоль значения всех полей (toString)).
+        // System.out.println("Сумма затрат на зарплаты в месяц "+calculateSalary());
+        // System.out.println("Найти сотрудника с максимальной зарплатой "+maxSalary());
+       // System.out.println("Найти сотрудника с минимальной зарплатой "+minSalary());
+       // System.out.println("Подсчитать среднее значение зарплат "+calculateAverageSalary());
+        // printFullName(); //Получить Ф. И. О. всех сотрудников (вывести в консоль).
+
 
     }
-        public static void printEmployees() {
-            for (Employee employee: employees){
-                System.out.println(employee);
+            public static void printEmployees() {
+                for (Employee employee: employees){
+                    System.out.println(employee);
+                }
             }
-        }
 
             public static int calculateSalary() {
         int sum= 0;
@@ -29,7 +37,7 @@ public class Main {
         return sum;
             }
 
-    public static Employee maxMinSalary() {
+    public static Employee maxSalary() {
         Employee result=employees[0];
         int maxSalary =employees[0].getSalary();
         for (Employee employee: employees){
@@ -40,6 +48,20 @@ public class Main {
         }
         return result;
     }
+
+    public static Employee minSalary() {
+        Employee result=employees[0];
+        int minSalary =employees[0].getSalary();
+        for (Employee employee: employees){
+            if (employee.getSalary()<minSalary){
+                minSalary = employee.getSalary();
+                result= employee;
+            }
+        }
+        return result;
+    }
+
+
 
     public static float calculateAverageSalary(){
             return calculateSalary()/(float) employees.length; }
